@@ -34,6 +34,7 @@ $(function () {
       // ? empty params
       console.log("created a new burger!");
       // reload the page to get updated list
+
       location.reload();
     });
   });
