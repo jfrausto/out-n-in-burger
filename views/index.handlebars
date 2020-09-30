@@ -1,0 +1,42 @@
+<div class="container">
+
+    <header class="row">
+        <div class="col-12">
+            {{!-- burger <img> --}}
+            <h1>Out n In Burger!</h1>
+        </div>
+    </header>
+    <main class="row">
+        <div class="col-6 notDevoured">
+            <ul>
+                {{#each burgers}}
+                {{#unless devoured}}
+                {{> burgers/burger-block devour=true}}
+                {{/unless}}
+                {{/each}}
+            </ul>
+        </div>
+        <div class="col-6 devoured">
+            <ul>
+                {{#each burgers}}
+                {{#if devoured}}
+                {{!-- will probably not need to set devoured to false; --}}
+                {{!-- we will not UN-eat the burger --}}
+                {{> burgers/burger-block devour=false}}
+                {{/if}}
+                {{/each}}
+            </ul>
+        </div>
+    </main>
+    <footer class="row">
+        <div class="col-12">
+            <form id="sendNewBurger">
+                <div class="form-group">
+                    <label for="burgerTextArea">new burger?</label>
+                    <textarea class="form-control" id="burgerTextArea" rows="3"></textarea>
+                </div>
+                <button type="submit">SUBMIT</button>
+            </form>
+        </div>
+    </footer>
+</div>

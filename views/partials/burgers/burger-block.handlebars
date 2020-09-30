@@ -1,0 +1,13 @@
+<li>
+    {{burger_name}}
+    {{#if devour}}
+    <button class="change-devour" data-id="{{id}}" data-newDevour="{{devour}}">
+        DEVOUR
+    </button>
+    {{!-- if you want to be extra --}}
+    {{!-- randomize what this says! --}}
+    {{else}}...was very delicious! {{/if}}
+
+    {{!-- <button class="change-devour" data-id="{{id}}" data-newDevour="{{sleep}}">
+	</button> --}}
+</li>
