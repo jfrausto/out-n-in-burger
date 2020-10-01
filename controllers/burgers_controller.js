@@ -10,35 +10,38 @@ router.get("/", function (req, res) {
     const handlebarsObj = {
       burgers: data,
     };
+    console.log("printing handlebars obj...");
     console.log(handlebarsObj);
     res.render("index", handlebarsObj);
   });
 });
 
 router.post("/api/burgers", function (req, res) {
-  burger.insertOne(["burger_name"], [req.body.burger_name], function (result) {
-    console.log("we are in post/create callback function");
+  burger.insertOne("burger_name", req.body.burger_name, function (result) {
+    console.log("we are in post/create router callback function");
     console.log(result);
     // res.json({id: result.insertId});
   });
-
-  router.put("/api/burgers/:id", function (req, res) {
-    let condition = "id = " + req.params.id;
-    console.log("condition", condition);
-
-    burger.updateOne(
-      {
-        devoured: req.body.devoured,
-      },
-      condition,
-      function (result) {
-        if (result.changedRows == 0) {
-          return res.status(404).end();
-        } else {
-          res.status(200).end();
-        }
-      }
-    );
-  });
 });
+
+router.put("/api/burgers/:id", function (req, res) {
+  let condition = "id = " + req.params.id;
+  console.log("condition", condition);
+
+  burger.updateOne(
+    {
+      devoured: req.body.devoured,
+    },
+    condition,
+    function (result) {
+      if (result.changedRows == 0) {
+        console.log("WAIT A MINUTE...");
+        return res.status(404).end();
+      } else {
+        res.status(200).end();
+      }
+    }
+  );
+});
+
 module.exports = router;
