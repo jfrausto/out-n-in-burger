@@ -32,9 +32,10 @@ $(function () {
     $.ajax("/api/burgers", {
       type: "POST",
       data: newBurger,
-    }).then(function () {
+    }).then(function (data) {
       // ? empty params
-      console.log("created a new burger!");
+      console.log(data);
+      console.log(`created a new burger! ID = ${data.insertId}`);
       // reload the page to get updated list
 
       location.reload();
