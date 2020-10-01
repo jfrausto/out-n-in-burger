@@ -1,12 +1,14 @@
 $(function () {
   // when you hit the devour button
   $(".change-devour").on("click", function (event) {
-    const id = $(this).data("id");
-    const devourState = $(this).data("newDevour");
+    var id = $(this).data("id");
+    var devourState = $(this).data("newdevour");
 
-    const newDevourState = {
+    var newDevourState = {
       devoured: devourState,
     };
+
+    console.log(id, devourState);
 
     // send the PUT request.
     $.ajax("/api/burgers/" + id, {
@@ -30,10 +32,12 @@ $(function () {
     $.ajax("/api/burgers", {
       type: "POST",
       data: newBurger,
-    }).then(function () {
+    }).then(function (data) {
       // ? empty params
-      console.log("created a new burger!");
+      console.log(data);
+      console.log(`created a new burger! ID = ${data.insertId}`);
       // reload the page to get updated list
+
       location.reload();
     });
   });
