@@ -3,15 +3,37 @@ body {
 }
 
 h1 {
-  color: red;
+  color: purple;
+  font-variant: small-caps;
+  font-weight: 900;
+}
+span {
+  color: black;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
-.notDevoured ul {
-  background-color: ivory;
+#burgerPng {
+  width: 30%;
+  height: 70%;
+}
+h2 {
+  color: black;
+  font-style: italic;
+  text-underline-position: below;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
-.devoured {
+li {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.devoured,
+.notDevoured {
+  max-height: 400px;
   overflow-y: auto;
+  border-radius: 25% 10%;
 }
 
 /* form {
