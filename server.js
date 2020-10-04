@@ -1,7 +1,7 @@
 const express = require("express");
-const exphbs = require("express-handlebars");
+var exphbs = require("express-handlebars");
 const PORT = process.env.PORT || 7000;
-const app = express();
+var app = express();
 
 // serve static content from the public directory
 app.use(express.static("public"));
@@ -13,7 +13,7 @@ app.use(express.json());
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
-const routes = require("./controllers/burgers_controller");
+var routes = require("./controllers/burgers_controller");
 
 app.use(routes);
 
