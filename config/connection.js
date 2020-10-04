@@ -1,6 +1,7 @@
 // Set up MySQL connection.
 const mysql = require("mysql");
 
+// will need to update this for deployment
 const connection = mysql.createConnection({
   host: "localhost",
   port: 3306,
