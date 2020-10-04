@@ -2,10 +2,10 @@
 const connection = require("../config/connection.js");
 
 // ORM methods directly communicate with MySQL database
-const orm = {
+let orm = {
   // queries here
   selectAll: function (tableInput, cb) {
-    const query = `SELECT * FROM ${tableInput};`;
+    let query = `SELECT * FROM ${tableInput};`;
     connection.query(query, function (err, result) {
       if (err) throw err;
       // finally execute our callbacks cascade
@@ -13,7 +13,7 @@ const orm = {
     });
   },
   insertOne: function (table, col, val, cb) {
-    const query = `INSERT INTO ${table}(${col}) 
+    let query = `INSERT INTO ${table}(${col}) 
                     VALUES (?)`;
     connection.query(query, val, function (err, result) {
       if (err) throw err;
@@ -28,7 +28,7 @@ const orm = {
     if (objColVals.devoured) {
       bit = 1;
     }
-    const query = `UPDATE ${table} 
+    let query = `UPDATE ${table} 
                     SET devoured = ${bit} 
                     WHERE ${condition};`;
     connection.query(query, function (err, result) {
