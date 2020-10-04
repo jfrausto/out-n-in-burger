@@ -2,18 +2,18 @@
   "name": "out-n-in-burger",
   "version": "1.0.0",
   "description": "This application allows you to create custom burgers and save them to a MySQL database!",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "start": "node server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jfrausto/out-n-in-burger.git"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Jesse F",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/jfrausto/out-n-in-burger/issues"
   },
