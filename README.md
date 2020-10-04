@@ -22,7 +22,7 @@ Visit the application with [this]() link.
 
 You will find that some burgers have already been created once you visit the application. You can "devour" them from the "in" list to update the page and move that burger to the "out" list. You are also able to input the name of your own burger!
 
-![ie](/screenshots/ie.PNG?raw=true "ie")
+![Burger view!](/screenshots/burger_app.PNG?raw=true "sample burger page look")
 
 ## License
 
@@ -39,4 +39,4 @@ Create a new branch and do a pull request, pending review.
 
 ## Links
 
-- [ie](ie)
+- [Deployed app](https://gentle-oasis-33918.herokuapp.com/)
