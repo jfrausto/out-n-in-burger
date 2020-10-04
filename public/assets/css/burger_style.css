@@ -12,7 +12,7 @@ span {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
-
+/* responsive burger img sizing */
 #burgerPng {
   width: 30%;
   height: 70%;
@@ -29,24 +29,11 @@ li {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
+
+/* allow scroll bars to appear when there are a lot of burgers */
 .devoured,
 .notDevoured {
   max-height: 400px;
   overflow-y: auto;
   border-radius: 25% 10%;
 }
-
-/* form {
-  display: block;
-  width: 33%;
-} */
-/* .formRow {
-  display: block;
-  width: 100%;
-}
-
-.formArea {
-  display: block;
-  width: 40%;
-  background-color: purple;
-} */

@@ -1,3 +1,5 @@
+{{!-- split index into three containers --}}
+{{!-- title and image --}}
 <header class="container mt-3 mb-2">
     <div class="row">
         <div class="col-12 text-center">
@@ -7,6 +9,7 @@
         </div>
     </div>
 </header>
+{{!-- main content area displays two columns of burgers --}}
 <main class="container mb-3 mt-4">
     <div class="row">
         <div class="col-12 col-md-6 mb-2 text-center">
@@ -14,6 +17,7 @@
             <ul class="list-group border border-dark rounded notDevoured">
                 {{#each burgers}}
                 {{#unless devoured}}
+                {{!-- 'unless' is the opposite of 'if' --}}
                 {{> burgers/burger-block devour=true}}
                 {{/unless}}
                 {{/each}}
@@ -24,8 +28,7 @@
             <ul class="list-group border border-dark rounded devoured">
                 {{#each burgers}}
                 {{#if devoured}}
-                {{!-- will probably not need to set devoured to false; --}}
-                {{!-- we will not UN-eat the burger --}}
+                {{!-- go into burger-block to render devoured --}}
                 {{> burgers/burger-block devour=false}}
                 {{/if}}
                 {{/each}}
@@ -33,6 +36,8 @@
         </div>
     </div>
 </main>
+
+{{!-- submit new burger --}}
 <footer class=" container mt-4">
     <div class="row">
         <div class="col-12 col-md-6 offset-md-3 text-center">
