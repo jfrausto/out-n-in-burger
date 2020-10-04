@@ -3,28 +3,37 @@ body {
 }
 
 h1 {
-  color: red;
+  color: purple;
+  font-variant: small-caps;
+  font-weight: 900;
+}
+span {
+  color: black;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+/* responsive burger img sizing */
+#burgerPng {
+  width: 30%;
+  height: 70%;
+}
+h2 {
+  color: black;
+  font-style: italic;
+  text-underline-position: below;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
-.notDevoured ul {
-  background-color: ivory;
+li {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
-.devoured {
+/* allow scroll bars to appear when there are a lot of burgers */
+.devoured,
+.notDevoured {
+  max-height: 400px;
   overflow-y: auto;
+  border-radius: 25% 10%;
 }
-
-/* form {
-  display: block;
-  width: 33%;
-} */
-/* .formRow {
-  display: block;
-  width: 100%;
-}
-
-.formArea {
-  display: block;
-  width: 40%;
-  background-color: purple;
-} */

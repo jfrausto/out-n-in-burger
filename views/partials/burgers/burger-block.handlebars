@@ -1,13 +1,11 @@
+{{!-- this Partial creates li elements according to what... --}}
+{{!-- ...data comes with it in the helper function--}}
 <li class="list-group-item">
     {{burger_name}}
     {{#if devour}}
     <button class="change-devour" data-id="{{id}}" data-newdevour="{{devour}}">
         DEVOUR
     </button>
-    {{!-- if you want to be extra --}}
-    {{!-- randomize what this says! --}}
+    {{!-- this burger was devoured! --}}
     {{else}}...was very delicious! {{/if}}
-
-    {{!-- <button class="change-devour" data-id="{{id}}" data-newDevour="{{sleep}}">
-	</button> --}}
 </li>
