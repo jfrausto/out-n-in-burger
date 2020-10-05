@@ -1,5 +1,5 @@
 // import mysql connection
-const connection = require("../config/connection.js");
+var connection = require("./connection");
 
 // ORM methods directly communicate with MySQL database
 let orm = {
